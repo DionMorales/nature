@@ -27,15 +27,15 @@ body.detail {
 
 /* Photo placeholders: replace each gradient with url(your-photo.jpg) */
 .c1 {
-    --g: linear-gradient(160deg, #7fa88b, #2c4a3a)
+    --g: url(img/butterfly-sanctuary.jpg);
 }
 
 .c2 {
-    --g: linear-gradient(160deg, #d9b44a, #4d6b2a)
+    --g: url(img/beekeeping.jpg);
 }
 
 .c3 {
-    --g: linear-gradient(160deg, #9fb6c4, #34434d)
+    --g: url(img/research-facilities.jpg);
 }
 
 .img,
