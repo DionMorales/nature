@@ -137,7 +137,7 @@ nav {
 
 .title {
     margin-top: 9vh;
-    text-align: center;
+    text-align: left;
     font-family: 'Cormorant Garamond', serif;
     color: var(--gold);
     text-shadow: 0 4px 12px rgba(0, 0, 0, .6)
