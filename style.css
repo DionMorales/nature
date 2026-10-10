@@ -1,6 +1,7 @@
 :root {
+    --cw: clamp(140px, min(16.5vw, 25vh), 230px);
     --green: #1f5a14;
-    --gold: #8a7b52;
+    --gold: #8c7f5e;
     --cream: #d8c98f;
     --olive: #5b6a1d;
     --card: linear-gradient(135deg, #8c9879, #5b6a4a)
@@ -18,24 +19,31 @@ html {
 body {
     font-family: Montserrat, system-ui, sans-serif;
     background: #fff;
-    color: #111
+    color: #111;
+    overflow-x: hidden
 }
 
 body.detail {
     background: #e9ece4
 }
 
-/* Photo placeholders: replace each gradient with url(your-photo.jpg) */
+/* PHOTOS*/
 .c1 {
-    --g: linear-gradient(160deg, #7fa88b, #2c4a3a)
+    --g: url(img/butterfly-sanctuary.jpg);
+    --pos: 50% 50%;
+    --dpos: 50% 50%
 }
 
 .c2 {
-    --g: linear-gradient(160deg, #d9b44a, #4d6b2a)
+    --g: url(img/beekeeping.jpg);
+    --pos: 35% 50%;
+    --dpos: 50% 25%
 }
 
 .c3 {
-    --g: linear-gradient(160deg, #9fb6c4, #34434d)
+    --g: url(img/research-facilities.jpg);
+    --pos: 78% 50%;
+    --dpos: 50% 40%
 }
 
 .img,
@@ -43,7 +51,11 @@ body.detail {
 .ph {
     background-image: var(--g);
     background-size: cover;
-    background-position: center
+    background-position: var(--pos, center)
+}
+
+.d-photo {
+    background-position: var(--dpos, center)
 }
 
 /* NAV */
@@ -59,17 +71,18 @@ nav {
 }
 
 .logo img {
-    height: clamp(26px, 4.6vh, 34px);
+    height: clamp(28px, 5vh, 40px);
     width: auto;
     display: block
 }
 
 .search {
-    background: #d9d9d9;
+    background: #dcdcdc;
     border-radius: 999px;
     padding: 3px 12px;
     font-size: 11px;
-    width: 140px;
+    font-weight: 600;
+    width: 170px;
     color: #444
 }
 
@@ -86,7 +99,7 @@ nav {
     margin-left: auto;
     display: flex;
     gap: 26px;
-    font: 700 clamp(11px, 2vh, 14px) Gafata, Montserrat, sans-serif
+    font: 400 clamp(12px, 2.3vh, 16px) 'Lilita One', Gafata, Montserrat, sans-serif
 }
 
 .links a {
@@ -118,14 +131,15 @@ nav {
 
 .login {
     background: var(--green);
-    color: #fff
+    color: #fff;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .35)
 }
 
-/* HOME HERO (swap the gradient with your photo: --hero-img:url(hero.jpg)) */
+/* HOME HERO */
 .hero {
-    --hero-img: none;
+    --hero-img: linear-gradient(rgba(4, 18, 6, .7), rgba(4, 18, 6, .5)), url(img/hero.jpg);
     min-height: calc(100vh - 53px);
-    padding: 0 4vw 4vw;
+    padding: 0 4vw clamp(30px, 6vh, 70px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -184,25 +198,26 @@ nav {
     display: none
 }
 
-/* CARDS: desktop = small cards over the bottom-right of the hero */
+/* CARDS: desktop */
 .cards {
     position: relative;
     z-index: 2;
     display: flex;
     justify-content: flex-end;
-    gap: 12px;
-    padding: 0 4vw 4vw;
-    margin-top: calc(-214px - 4vw)
+    gap: 1.2vw;
+    margin: calc(var(--cw) / -.74 - 1.6vw) -1vw 0 0;
+    padding: 0 0 1.6vw
 }
 
 .card {
-    flex: 0 0 190px;
-    height: 214px;
+    flex: 0 0 var(--cw);
+    aspect-ratio: .74;
     position: relative;
     display: block;
     text-decoration: none;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, .6);
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, .85);
+    box-shadow: 4px 6px 8px rgba(0, 0, 0, .6);
     overflow: hidden;
     cursor: pointer;
     color: #fff;
@@ -224,13 +239,14 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 22px 12px 12px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, .75))
+    padding: 30px 10px 10px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .55))
 }
 
 .card h2 {
-    font: 700 17px/1.1 Gafata, Montserrat, sans-serif;
-    text-transform: uppercase
+    font: 400 clamp(12px, min(1.6vw, 2.6vh), 21px)/1.05 'Lilita One', Gafata, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px #000
 }
 
 .desc,
@@ -276,8 +292,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-    font: 400 clamp(10px, 1.8vh, 12px) Gafata, Montserrat, sans-serif;
-    font-weight: 700;
+    font: 400 clamp(11px, 2vh, 14px) 'Lilita One', Gafata, Montserrat, sans-serif;
     margin-bottom: 4px;
     text-shadow: 0 1px 4px #000
 }
@@ -322,7 +337,8 @@ nav {
 
 .book-btn {
     background: #1d4f10;
-    color: #fff
+    color: #fff;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, .45)
 }
 
 .learn-btn {
@@ -337,24 +353,6 @@ nav {
     bottom: 1.6vw;
     display: flex;
     gap: 1.2vw
-}
-
-.d-cards .card {
-    flex: 0 0 clamp(140px, min(16.5vw, 25vh), 230px);
-    height: auto;
-    aspect-ratio: .74;
-    border: 2px solid rgba(255, 255, 255, .85);
-    border-radius: 16px;
-    box-shadow: 4px 6px 8px rgba(0, 0, 0, .6)
-}
-
-.d-cards .card .info {
-    padding: 30px 10px 10px
-}
-
-.d-cards .card h2 {
-    font-size: clamp(11px, min(1.4vw, 2.3vh), 18px);
-    text-shadow: 0 2px 4px #000
 }
 
 .more {
@@ -474,8 +472,15 @@ nav {
         padding: 18px 4vw 24px
     }
 
+    .card .info {
+        padding: 14px 16px
+    }
+
     .card {
         display: flex;
+        flex: none;
+        aspect-ratio: auto;
+        box-shadow: none;
         height: auto;
         min-height: 150px;
         margin-bottom: 14px;
@@ -763,5 +768,54 @@ nav {
         left: 50%;
         right: auto;
         transform: translateX(-50%)
+    }
+}
+
+/* DESKTOP HOME HERO */
+@media(min-width:1100px) {
+    .hero .title {
+        text-align: left;
+        margin: clamp(24px, 6vh, 80px) 0 0 -2vw;
+        color: var(--gold);
+        text-shadow: 5px 6px 6px rgba(0, 0, 0, .55)
+    }
+
+    .hero .title .script {
+        font: 500 min(9vw, 15vh)/.95 'Cormorant Garamond', serif;
+        text-transform: uppercase;
+        letter-spacing: .02em
+    }
+
+    .hero .title .script::first-letter {
+        font: 400 1.9em/1 'Pinyon Script', cursive
+    }
+
+    .hero .title .found {
+        font: 500 min(9vw, 15vh)/1 'Cormorant Garamond', serif;
+        letter-spacing: .04em;
+        margin-left: 16vw
+    }
+
+    .hero .tag {
+        max-width: 49vw;
+        margin-left: -4vw
+    }
+
+    .hero .tag p {
+        background: rgba(0, 0, 0, .4);
+        padding: 1.6vw 2vw 1.6vw 5.4vw;
+        font: 500 clamp(12px, min(1.55vw, 2.6vh), 19px)/1.4 Montserrat, sans-serif;
+        color: #c9bf86
+    }
+
+    .hero .tag p b {
+        color: #e6dfb0
+    }
+
+    .hero .tag h3 {
+        padding-left: 5.4vw;
+        margin-top: 2.4vh;
+        font: 600 clamp(14px, min(2vw, 3.4vh), 24px) Montserrat, sans-serif;
+        color: #aaa55c
     }
 }
