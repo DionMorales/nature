@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Your Visit — Nature-ally Found</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;500&family=Libre+Franklin:wght@300;400;600&family=Source+Serif+4:wght@400;500&family=Lilita+One&family=Gafata&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="detail booking">
+    <nav id="nav">
+        <input type="checkbox" id="menu" class="menu-t" aria-label="Menu">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Nature-ally Found logo"></a>
+        <div class="search">🔍 Search</div>
+        <span class="search-ic" aria-hidden="true">🔍</span>
+        <div class="links">
+            <a href="index.html">Home</a><a href="booking.html">Booking</a><a
+                href="contact.html">Contact Us</a>
+        </div>
+        <div class="auth"><a class="signup" href="#signup">Sign Up</a><a class="login" href="#login">Login</a></div>
+        <label class="burger" for="menu">☰</label>
+    </nav>
+
+    <section class="hero banner">
+        <h1 class="title"><span class="script">Nature-ally</span><span class="found">FOUND</span></h1>
+        <div class="tag">
+            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish <b>Bee</b>yond
+                boundaries.</p>
+            <h3>Small Wings, Lasting Impact.</h3>
+        </div>
+    </section>
+
+    <section class="b-hero">
+        <div class="b-text">
+            <p class="loc"><i class="fa-solid fa-location-dot pin"></i> La Trinidad, Benguet</p>
+            <h1>Book Your <br>Visit</h1>
+            <p class="lead">Choose an experience, pick a date, and we will reserve your spot at the sanctuary.</p>
+            <ul class="b-info">
+                <li><i class="fa-solid fa-hat-cowboy"></i> Protective gear is provided for beekeeping sessions</li>
+                <li><i class="fa-solid fa-person-walking"></i> Guided walkthroughs of the glasshouse</li>
+                <li><i class="fa-solid fa-flask"></i> Open to students, researchers, and partner institutions</li>
+            </ul>
+        </div>
+
+        <div class="b-card">
+            <form id="bookingForm" action="mailto:NatureAllyFound@gmail.com?subject=Booking%20Request" method="post"
+                enctype="text/plain">
+                <h2>Reserve your spot</h2>
+                <fieldset class="visit">
+                    <legend>Choose an experience</legend>
+                    <div class="opts">
+                        <label class="opt"><input type="radio" name="visit" value="Butterfly Sanctuary" required><span
+                                class="o-img" style="--g:url(img/butterfly-sanctuary.jpg)"></span><span
+                                class="o-t">Butterfly Sanctuary</span></label>
+                        <label class="opt"><input type="radio" name="visit" value="Beekeeping &amp; Conservation"><span
+                                class="o-img" style="--g:url(img/beekeeping.jpg)"></span><span class="o-t">Beekeeping
+                                &amp; Conservation</span></label>
+                        <label class="opt"><input type="radio" name="visit" value="Research Facilities"><span
+                                class="o-img" style="--g:url(img/research-facilities.jpg)"></span><span
+                                class="o-t">Research Facilities</span></label>
+                    </div>
+                </fieldset>
+                <div class="row three">
+                    <label>Date<input type="date" name="date" required></label>
+                    <label>Time<select name="time" required>
+                            <option value="">Select</option>
+                            <option>9:00 AM</option>
+                            <option>11:00 AM</option>
+                            <option>1:00 PM</option>
+                            <option>3:00 PM</option>
+                        </select></label>
+                    <label>Guests<input type="number" name="guests" min="1" max="20" value="1" inputmode="numeric"
+                            required></label>
+                </div>
+                <div class="row">
+                    <label>Full name<input type="text" name="fullname" autocomplete="name" minlength="2"
+                            required></label>
+                    <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                </div>
+                <div class="row">
+                    <label>Phone<input type="tel" name="phone" autocomplete="tel" pattern="[0-9 +\-]{7,}"
+                            title="Enter a valid phone number" required></label>
+                    <label>Notes (optional)<input type="text" name="notes"></label>
+                </div>
+                <p class="b-note">Your email app will open with your booking details, ready to send.</p>
+                <button class="primary" type="submit">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="f-cols">
+            <div>
+                <h5>Explore</h5><a href="index.html">Home</a><a href="#">Experience</a><a
+                    href="booking.html">Booking</a>
+            </div>
+            <div>
+                <h5>Support</h5><a href="contact.html">Contact</a><a href="#">FAQs</a><a href="#">Cookie Settings</a><a
+                    href="#">Terms &amp; Conditions</a>
+            </div>
+            <div class="f-connect">
+                <h5>Connect</h5>
+                <p>Location: La Trinidad, Benguet Philippines</p>
+                <p>Email: NatureAllyFound@gmail.com</p>
+                <p>Phone: 888-888-8888</p>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <p>© 2026 Butterfly Sanctuary. All rights reserved.</p>
+            <div class="social">
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="login">
+        <a class="m-backdrop" href="#" aria-label="Close"></a>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <a class="m-close" href="#" aria-label="Close">&times;</a>
+            <img class="m-logo" src="img/logo.png" alt="">
+            <form class="m-form" action="#" method="get">
+                <h2 id="loginTitle">Welcome back</h2>
+                <p class="m-sub">Log in to manage your visits.</p>
+                <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                <label>Password<input type="password" autocomplete="current-password" required></label>
+                <button class="primary" type="submit">Log in</button>
+                <p class="m-switch">New here? <a href="#signup">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay" id="signup">
+        <a class="m-backdrop" href="#" aria-label="Close"></a>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+            <a class="m-close" href="#" aria-label="Close">&times;</a>
+            <img class="m-logo" src="img/logo.png" alt="">
+            <form class="m-form" action="#" method="get">
+                <h2 id="signupTitle">Join Nature-ally Found</h2>
+                <p class="m-sub">Create an account to book your visits.</p>
+                <label>Full name<input type="text" name="fullname" autocomplete="name" minlength="2" required></label>
+                <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                <label>Password<input type="password" autocomplete="new-password" minlength="8" required></label>
+                <button class="primary" type="submit">Sign up</button>
+                <p class="m-switch">Already have an account? <a href="#login">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

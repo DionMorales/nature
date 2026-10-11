@@ -14,18 +14,18 @@
 
 <body class="detail c2">
     <nav id="nav">
+        <input type="checkbox" id="menu" class="menu-t" aria-label="Menu">
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Nature-ally Found logo"></a>
         <div class="search">🔍 Search</div>
-        <button class="search-ic" aria-label="Search">🔍</button>
+        <span class="search-ic" aria-hidden="true">🔍</span>
         <div class="links">
             <a href="index.html">Home</a><a href="booking.html">Booking</a><a
                 href="contact.html">Contact Us</a>
         </div>
-        <div class="auth"><button class="signup">Sign Up</button><button class="login">Login</button></div>
-        <button class="burger" id="burger" aria-label="Menu">☰</button>
+        <div class="auth"><a class="signup" href="#signup">Sign Up</a><a class="login" href="#login">Login</a></div>
+        <label class="burger" for="menu">☰</label>
     </nav>
 
-    <!-- tablet + phone only -->
     <section class="hero banner">
         <h1 class="title"><span class="script">Nature-ally</span><span class="found">FOUND</span></h1>
         <div class="tag">
@@ -102,7 +102,6 @@
         </div>
     </section>
 
-
     <footer class="footer">
         <div class="f-cols">
             <div>
@@ -131,7 +130,39 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div class="overlay" id="login">
+        <a class="m-backdrop" href="#" aria-label="Close"></a>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+            <a class="m-close" href="#" aria-label="Close">&times;</a>
+            <img class="m-logo" src="img/logo.png" alt="">
+            <form class="m-form" action="#" method="get">
+                <h2 id="loginTitle">Welcome back</h2>
+                <p class="m-sub">Log in to manage your visits.</p>
+                <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                <label>Password<input type="password" autocomplete="current-password" required></label>
+                <button class="primary" type="submit">Log in</button>
+                <p class="m-switch">New here? <a href="#signup">Create an account</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="overlay" id="signup">
+        <a class="m-backdrop" href="#" aria-label="Close"></a>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+            <a class="m-close" href="#" aria-label="Close">&times;</a>
+            <img class="m-logo" src="img/logo.png" alt="">
+            <form class="m-form" action="#" method="get">
+                <h2 id="signupTitle">Join Nature-ally Found</h2>
+                <p class="m-sub">Create an account to book your visits.</p>
+                <label>Full name<input type="text" name="fullname" autocomplete="name" minlength="2" required></label>
+                <label>Email<input type="email" name="email" autocomplete="email" required></label>
+                <label>Password<input type="password" autocomplete="new-password" minlength="8" required></label>
+                <button class="primary" type="submit">Sign up</button>
+                <p class="m-switch">Already have an account? <a href="#login">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
