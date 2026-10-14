@@ -15,28 +15,34 @@
 <body class="detail c3">
     <nav id="nav">
         <input type="checkbox" id="menu" class="menu-t" aria-label="Menu">
+        <a class="nav-back" href="index.html" aria-label="Back to Home">&larr;</a>
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Nature-ally Found logo"></a>
-        <div class="search">🔍 Search</div>
-        <span class="search-ic" aria-hidden="true">🔍</span>
+        <input type="checkbox" id="find" class="find-t" aria-label="Open search">
+        <form class="search" action="https://duckduckgo.com/" method="get" role="search">
+            <input type="hidden" name="sites" value="YOUR-USERNAME.github.io">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" name="q" placeholder="Search" aria-label="Search this site">
+        </form>
+        <label class="search-ic" for="find" aria-label="Search">🔍</label>
         <div class="links">
             <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="contact.html">Contact Us</a>
         </div>
         <div class="auth"><a class="signup" href="#signup">Sign Up</a><a class="login" href="#login">Login</a></div>
-        <label class="burger" for="menu">☰</label>
+        <label class="burger" for="menu" aria-label="Menu">☰</label>
     </nav>
-
 
     <section class="hero banner">
         <h1 class="title"><span class="script">Nature-ally</span><span class="found">FOUND</span></h1>
         <div class="tag">
-            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish <b>Bee</b>yond
-                boundaries.</p>
+            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish
+                <b>Bee</b>yond boundaries.
+            </p>
             <h3>Small Wings, Lasting Impact.</h3>
         </div>
     </section>
 
     <section class="d-hero">
-        <div class="d-photo"></div>
+        <div class="d-photo" role="img" aria-label="Scientist working at a bench in a research lab"></div>
         <div class="d-text">
             <p class="loc"><i class="fa-solid fa-location-dot pin"></i><span class="zn">Zone 3</span> La Trinidad,
                 Benguet</p>
@@ -48,19 +54,21 @@
         </div>
         <div class="d-cards">
             <a class="card c1" href="butterfly-sanctuary.html">
-                <div class="img"></div>
+                <div class="img" role="img"
+                    aria-label="Glass-domed butterfly sanctuary with butterflies hanging from the roof"></div>
                 <div class="info">
                     <h2>Butterfly Sanctuary</h2>
                 </div>
             </a>
             <a class="card c2" href="beekeeping.html">
-                <div class="img"></div>
+                <div class="img" role="img" aria-label="Beekeepers in white suits examining a honeycomb frame">
+                </div>
                 <div class="info">
                     <h2>Beekeeping &amp; Conservation</h2>
                 </div>
             </a>
             <a class="card c3" href="research.html">
-                <div class="img"></div>
+                <div class="img" role="img" aria-label="Scientist working at a bench in a research lab"></div>
                 <div class="info">
                     <h2>Research Facilities</h2>
                 </div>
@@ -73,44 +81,45 @@
         <div class="box">
             <h3>Science Behind the Sanctuary</h3>
             <p>Our research facilities support ongoing studies on butterfly and bee populations, plant-pollinator
-                relationships, and the impact of habitat design on conservation outcomes. Equipped with on-site labs and
-                field monitoring stations, the facility serves as a working research hub for students, academic
+                relationships, and the impact of habitat design on conservation outcomes. Equipped with on-site labs
+                and field monitoring stations, the facility serves as a working research hub for students, academic
                 partners, and conservation scientists alike.</p>
             <h3>Advancing Conservation Through Research</h3>
             <div class="tiles">
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/research-field.jpg)"></div>
+                    <div class="ph" style="--g:url(img/research-field.jpg)" role="img"
+                        aria-label="Two researchers examining plants in a greenhouse"></div>
                     <h4>Active Field Studies</h4>
                     <p>Explore ongoing research on pollinator behavior, habitat health, and biodiversity within the
                         sanctuary.</p>
                 </div>
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/research-lab.jpg)"></div>
+                    <div class="ph" style="--g:url(img/research-lab.jpg)" role="img"
+                        aria-label="Scientists using a tablet next to a lab computer"></div>
                     <h4>Lab &amp; Equipment</h4>
                     <p>Get a look inside our on-site labs, where samples are analyzed and conservation data is
                         collected.</p>
                 </div>
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/research-programs.jpg)"></div>
+                    <div class="ph" style="--g:url(img/research-programs.jpg)" role="img"
+                        aria-label="Students watching a demonstration at a lab bench"></div>
                     <h4>Student &amp; Researcher Programs</h4>
-                    <p>Partner institutions and student researchers can apply for hands-on access to ongoing projects.
-                    </p>
+                    <p>Partner institutions and student researchers can apply for hands-on access to ongoing
+                        projects.</p>
                 </div>
             </div>
             <div class="box-book"><a class="book-btn" href="booking.html">Book Now</a></div>
         </div>
     </section>
 
-
     <footer class="footer">
         <div class="f-cols">
             <div>
-                <h5>Explore</h5><a href="index.html">Home</a><a href="#">Experience</a><a
+                <h5>Explore</h5><a href="index.html">Home</a><a href="index.html#cards">Experience</a><a
                     href="booking.html">Booking</a>
             </div>
             <div>
-                <h5>Support</h5><a href="contact.html">Contact</a><a href="#">FAQs</a><a href="#">Cookie Settings</a><a
-                    href="#">Terms &amp; Conditions</a>
+                <h5>Support</h5><a href="contact.html">Contact</a>
             </div>
             <div class="f-connect">
                 <h5>Connect</h5>
@@ -120,7 +129,7 @@
             </div>
         </div>
         <div class="f-bottom">
-            <p>© 2026 Butterfly Sanctuary. All rights reserved.</p>
+            <p>© 2026 Nature-ally Found. All rights reserved.</p>
             <div class="social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>

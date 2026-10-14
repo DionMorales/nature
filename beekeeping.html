@@ -15,53 +15,61 @@
 <body class="detail c2">
     <nav id="nav">
         <input type="checkbox" id="menu" class="menu-t" aria-label="Menu">
+        <a class="nav-back" href="index.html" aria-label="Back to Home">&larr;</a>
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Nature-ally Found logo"></a>
-        <div class="search">🔍 Search</div>
-        <span class="search-ic" aria-hidden="true">🔍</span>
+        <input type="checkbox" id="find" class="find-t" aria-label="Open search">
+        <form class="search" action="https://duckduckgo.com/" method="get" role="search">
+            <input type="hidden" name="sites" value="YOUR-USERNAME.github.io">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" name="q" placeholder="Search" aria-label="Search this site">
+        </form>
+        <label class="search-ic" for="find" aria-label="Search">🔍</label>
         <div class="links">
-            <a href="index.html">Home</a><a href="booking.html">Booking</a><a
-                href="contact.html">Contact Us</a>
+            <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="contact.html">Contact Us</a>
         </div>
         <div class="auth"><a class="signup" href="#signup">Sign Up</a><a class="login" href="#login">Login</a></div>
-        <label class="burger" for="menu">☰</label>
+        <label class="burger" for="menu" aria-label="Menu">☰</label>
     </nav>
 
     <section class="hero banner">
         <h1 class="title"><span class="script">Nature-ally</span><span class="found">FOUND</span></h1>
         <div class="tag">
-            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish <b>Bee</b>yond
-                boundaries.</p>
+            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish
+                <b>Bee</b>yond boundaries.
+            </p>
             <h3>Small Wings, Lasting Impact.</h3>
         </div>
     </section>
 
     <section class="d-hero">
-        <div class="d-photo"></div>
+        <div class="d-photo" role="img" aria-label="Beekeepers in white suits examining a honeycomb frame"></div>
         <div class="d-text">
             <p class="loc"><i class="fa-solid fa-location-dot pin"></i><span class="zn">Zone 2</span> La Trinidad,
                 Benguet</p>
             <h1>Beekeeping &amp; <br>Conservation</h1>
-            <p class="lead">Learn directly from our resident beekeepers — from hive inspection and honey harvesting to
-                understanding colony health and pollinator ecology. Sessions run year-round for students, researchers,
-                families, and aspiring beekeepers.</p>
+            <p class="lead">Learn directly from our resident beekeepers — from hive inspection and honey harvesting
+                to understanding colony health and pollinator ecology. Sessions run year-round for students,
+                researchers, families, and aspiring beekeepers.</p>
             <div class="btns"><a class="book-btn" href="booking.html">Book Now</a><a class="learn-btn"
                     href="#more">Learn More</a></div>
         </div>
         <div class="d-cards">
             <a class="card c3" href="research.html">
-                <div class="img"></div>
+                <div class="img" role="img" aria-label="Scientist working at a bench in a research lab"></div>
                 <div class="info">
                     <h2>Research Facilities</h2>
                 </div>
             </a>
             <a class="card c1" href="butterfly-sanctuary.html">
-                <div class="img"></div>
+                <div class="img" role="img"
+                    aria-label="Glass-domed butterfly sanctuary with butterflies hanging from the roof"></div>
                 <div class="info">
                     <h2>Butterfly Sanctuary</h2>
                 </div>
             </a>
             <a class="card c2" href="beekeeping.html">
-                <div class="img"></div>
+                <div class="img" role="img" aria-label="Beekeepers in white suits examining a honeycomb frame">
+                </div>
                 <div class="info">
                     <h2>Beekeeping &amp; Conservation</h2>
                 </div>
@@ -75,27 +83,30 @@
             <h3>Learning Through Direct Experience</h3>
             <p>Beekeeping and Conservation offers visitors a rare, up-close introduction to beekeeping — led by our
                 resident beekeepers. Sessions cover hive inspection, colony behavior, and honey harvesting, giving
-                participants a genuine understanding of what it takes to maintain a healthy, thriving hive. Protective
-                gear is provided, and no prior experience is needed.</p>
+                participants a genuine understanding of what it takes to maintain a healthy, thriving hive.
+                Protective gear is provided, and no prior experience is needed.</p>
             <h3>Protecting the Hive</h3>
             <div class="tiles">
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/bee-habitat.jpg)"></div>
+                    <div class="ph" style="--g:url(img/bee-habitat.jpg)" role="img"
+                        aria-label="Beekeeper holding a honeycomb frame full of bees"></div>
                     <h4>Habitat Protection</h4>
-                    <p>Hives are maintained using conservation-first methods that prioritize colony health and long-term
-                        survival.</p>
+                    <p>Hives are maintained using conservation-first methods that prioritize colony health and
+                        long-term survival.</p>
                 </div>
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/bee-research.jpg)"></div>
+                    <div class="ph" style="--g:url(img/bee-research.jpg)" role="img"
+                        aria-label="Two beekeepers working among wooden hives"></div>
                     <h4>Pollinator Research</h4>
                     <p>Ongoing studies track colony behavior and population health to support broader conservation
                         efforts.</p>
                 </div>
                 <div class="tile">
-                    <div class="ph" style="--g:url(img/bee-sustainable.jpg)"></div>
+                    <div class="ph" style="--g:url(img/bee-sustainable.jpg)" role="img"
+                        aria-label="Beekeeper in a hat inspecting a hive box"></div>
                     <h4>Sustainable Practices</h4>
-                    <p>Honey harvesting follows practices that protect the hive, ensuring bees are never over-harvested
-                        or displaced.</p>
+                    <p>Honey harvesting follows practices that protect the hive, ensuring bees are never
+                        over-harvested or displaced.</p>
                 </div>
             </div>
             <div class="box-book"><a class="book-btn" href="booking.html">Book Now</a></div>
@@ -105,12 +116,11 @@
     <footer class="footer">
         <div class="f-cols">
             <div>
-                <h5>Explore</h5><a href="index.html">Home</a><a href="#">Experience</a><a
+                <h5>Explore</h5><a href="index.html">Home</a><a href="index.html#cards">Experience</a><a
                     href="booking.html">Booking</a>
             </div>
             <div>
-                <h5>Support</h5><a href="contact.html">Contact</a><a href="#">FAQs</a><a href="#">Cookie Settings</a><a
-                    href="#">Terms &amp; Conditions</a>
+                <h5>Support</h5><a href="contact.html">Contact</a>
             </div>
             <div class="f-connect">
                 <h5>Connect</h5>
@@ -120,7 +130,7 @@
             </div>
         </div>
         <div class="f-bottom">
-            <p>© 2026 Butterfly Sanctuary. All rights reserved.</p>
+            <p>© 2026 Nature-ally Found. All rights reserved.</p>
             <div class="social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>

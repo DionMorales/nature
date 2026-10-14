@@ -15,21 +15,28 @@
 <body class="detail contact">
     <nav id="nav">
         <input type="checkbox" id="menu" class="menu-t" aria-label="Menu">
+        <a class="nav-back" href="index.html" aria-label="Back to Home">&larr;</a>
         <a href="index.html" class="logo"><img src="img/logo.png" alt="Nature-ally Found logo"></a>
-        <div class="search">🔍 Search</div>
-        <span class="search-ic" aria-hidden="true">🔍</span>
+        <input type="checkbox" id="find" class="find-t" aria-label="Open search">
+        <form class="search" action="https://duckduckgo.com/" method="get" role="search">
+            <input type="hidden" name="sites" value="YOUR-USERNAME.github.io">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" name="q" placeholder="Search" aria-label="Search this site">
+        </form>
+        <label class="search-ic" for="find" aria-label="Search">🔍</label>
         <div class="links">
             <a href="index.html">Home</a><a href="booking.html">Booking</a><a href="contact.html">Contact Us</a>
         </div>
         <div class="auth"><a class="signup" href="#signup">Sign Up</a><a class="login" href="#login">Login</a></div>
-        <label class="burger" for="menu">☰</label>
+        <label class="burger" for="menu" aria-label="Menu">☰</label>
     </nav>
 
     <section class="hero banner">
         <h1 class="title"><span class="script">Nature-ally</span><span class="found">FOUND</span></h1>
         <div class="tag">
-            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish <b>Bee</b>yond
-                boundaries.</p>
+            <p>Nature-ally <b>Cocoon</b>ected, shaping spaces where wings, nature, and people flourish
+                <b>Bee</b>yond boundaries.
+            </p>
             <h3>Small Wings, Lasting Impact.</h3>
         </div>
     </section>
@@ -38,8 +45,8 @@
         <div class="b-text">
             <p class="loc"><i class="fa-solid fa-location-dot pin"></i> La Trinidad, Benguet</p>
             <h1>Contact <br>Us</h1>
-            <p class="lead">Questions about a visit, a group tour, or our research programs? Send us a message and we
-                will get back to you.</p>
+            <p class="lead">Questions about a visit, a group tour, or our research programs? Send us a message and
+                we will get back to you.</p>
             <ul class="b-info">
                 <li><i class="fa-solid fa-location-dot"></i> La Trinidad, Benguet Philippines · <a
                         href="https://www.google.com/maps/search/?api=1&amp;query=La+Trinidad+Benguet" target="_blank"
@@ -85,12 +92,11 @@
     <footer class="footer">
         <div class="f-cols">
             <div>
-                <h5>Explore</h5><a href="index.html">Home</a><a href="#">Experience</a><a
+                <h5>Explore</h5><a href="index.html">Home</a><a href="index.html#cards">Experience</a><a
                     href="booking.html">Booking</a>
             </div>
             <div>
-                <h5>Support</h5><a href="contact.html">Contact</a><a href="#">FAQs</a><a href="#">Cookie Settings</a><a
-                    href="#">Terms &amp; Conditions</a>
+                <h5>Support</h5><a href="contact.html">Contact</a>
             </div>
             <div class="f-connect">
                 <h5>Connect</h5>
@@ -100,7 +106,7 @@
             </div>
         </div>
         <div class="f-bottom">
-            <p>© 2026 Butterfly Sanctuary. All rights reserved.</p>
+            <p>© 2026 Nature-ally Found. All rights reserved.</p>
             <div class="social">
                 <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>

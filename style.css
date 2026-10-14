@@ -94,7 +94,28 @@ nav {
     font-size: 11px;
     font-weight: 600;
     width: 170px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 6px
+}
+
+.search input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font: 600 11px Montserrat, sans-serif;
     color: #444
+}
+
+.nav-back {
+    display: none;
+    font-size: 22px;
+    line-height: 1;
+    color: #111;
+    text-decoration: none
 }
 
 .search-ic,
@@ -106,7 +127,8 @@ nav {
     cursor: pointer
 }
 
-.menu-t {
+.menu-t,
+.find-t {
     position: absolute;
     opacity: 0;
     pointer-events: none
@@ -489,6 +511,14 @@ nav {
 
     .logo img {
         height: 30px
+    }
+
+    .nav-back {
+        display: block
+    }
+
+    html {
+        scroll-padding-top: 260px
     }
 
     .search {
@@ -946,6 +976,22 @@ nav {
         height: 34px
     }
 
+    html {
+        scroll-padding-top: 190px
+    }
+
+    #find:checked~.search {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: auto;
+        border-radius: 0;
+        padding: 10px 14px;
+        z-index: 40
+    }
+
     .search-ic,
     .burger {
         display: block;
@@ -1369,7 +1415,8 @@ body:has(.overlay:target) {
 
 .m-form input,
 .b-card input:not([type=radio]),
-.b-card select {
+.b-card select,
+.b-card textarea {
     width: 100%;
     margin-top: 5px;
     padding: 9px 10px;
@@ -1382,7 +1429,8 @@ body:has(.overlay:target) {
 
 .m-form input:focus,
 .b-card input:focus,
-.b-card select:focus {
+.b-card select:focus,
+.b-card textarea:focus {
     outline: 2px solid #5f9a4e;
     border-color: #5f9a4e
 }
@@ -1557,6 +1605,33 @@ body:has(.overlay:target) {
 
 .row.three {
     grid-template-columns: 1.3fr 1fr .7fr
+}
+
+/* CONTACT */
+
+.b-card textarea {
+    display: block;
+    resize: vertical;
+    min-height: 110px
+}
+
+.b-info a {
+    color: inherit
+}
+
+.b-social {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    font-size: 20px
+}
+
+.b-social a {
+    color: #fff
+}
+
+.b-social a:hover {
+    color: var(--cream)
 }
 
 @media(max-width:1099px) {
